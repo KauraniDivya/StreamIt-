@@ -1,0 +1,242 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #E0E0E0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+nav {
+    background-color: #1E1E1E;
+    padding: 15px 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.navbar-brand span {
+    font-size: 24px;
+    font-weight: 600;
+    color: #BB86FC;
+}
+
+.navbar-icons i {
+    font-size: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    color: #BB86FC;
+    transition: color 0.3s;
+}
+
+.navbar-icons i:hover {
+    color: #03DAC6;
+}
+
+form {
+    background: #1E1E1E;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 40px 40px;
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+    color: #BB86FC;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #BB86FC;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #2C2C2C;
+    color: #E0E0E0;
+}
+
+form input::placeholder {
+    color: #BBBBBB;
+}
+
+form button {
+    background-color: #BB86FC;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+form button:hover {
+    background-color: #03DAC6;
+    transform: translateY(-2px);
+}
+
+form button:active {
+    transform: translateY(1px);
+}
+
+main {
+    display: none;
+}
+
+main.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+h1 {
+    color: #BB86FC;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.stream-container {
+    background: #1E1E1E;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+}
+
+video {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    background-color: #BB86FC;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s, transform 0.2s;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #03DAC6;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+#download-link {
+    text-decoration: none;
+    color: white;
+    background-color: #03DAC6;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#download-link:hover {
+    background-color: #BB86FC;
+}
+
+#download-link:active {
+    transform: translateY(1px);
+}
+
+#reset-icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+#reset-icon:hover {
+    transform: rotate(180deg);
+}
+
+#chat-iframe {
+    width: 40%;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}

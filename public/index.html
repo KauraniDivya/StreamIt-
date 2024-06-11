@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streamyard</title>
+    <link rel="stylesheet" href="./app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <img src="logo.png" alt="Logo">
+                <span>Streamyard</span>
+            </div>
+            <div class="navbar-icons">
+                <i class="fas fa-home"></i>
+                <i class="fas fa-user"></i>
+                <i class="fas fa-cog"></i>
+                <i class="fas fa-redo" id="reset-icon" title="Refill Form"></i>
+            </div>
+        </div>
+    </nav>
+    <form id="stream-form">
+        <label for="stream-url">YouTube Stream URL:</label>
+        <input type="text" id="stream-url" placeholder="Enter YouTube Stream URL" required>
+        <label for="stream-passkey">Passkey:</label>
+        <input type="text" id="stream-passkey" placeholder="Enter Passkey" required>
+        <button type="submit">Submit</button>
+    </form>
+    <main id="video-section">
+        <h1>Streamyard</h1>
+        <div class="stream-container">
+            <video id="user-video" autoplay muted></video>
+            
+            <button id="start-btn">Start Streaming</button>
+            <button id="stop-btn" disabled>Stop Streaming</button>
+            <!-- <button id="download-btn" disabled>Download Recorded Stream</button> -->
+            <a id="download-link" style="display:none;">Download Recorded Stream</a>
+            
+        </div>
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

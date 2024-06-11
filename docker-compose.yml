@@ -1,0 +1,37 @@
+version: '3'
+services:
+  app1:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - PORT=3000
+      - RTMP_URL=rtmp://a.rtmp.youtube.com/live2/channel1
+    volumes:
+      - ./:/home/app
+    ports:
+      - "3000:3000"
+
+  app2:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - PORT=3001
+      - RTMP_URL=rtmp://a.rtmp.youtube.com/live2/channel2
+    volumes:
+      - ./:/home/app
+    ports:
+      - "3001:3001"
+
+  app3:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - PORT=3002
+      - RTMP_URL=rtmp://a.rtmp.youtube.com/live2/channel3
+    volumes:
+      - ./:/home/app
+    ports:
+      - "3002:3002"
