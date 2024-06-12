@@ -36,3 +36,4 @@ This command will:
 
 By following these steps, you can run your streaming application within Docker containers, leveraging the power of Docker for an isolated and scalable environment.
 
+A special thanks to Piyush Garg Sir, for providing the basic understanding.
