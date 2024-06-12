@@ -4,6 +4,7 @@ const stopButton = document.getElementById('stop-btn');
 const downloadButton = document.getElementById('download-btn');
 const downloadLink = document.getElementById('download-link');
 const streamForm = document.getElementById('stream-form');
+const FormId = document.getElementById('form-id');
 const streamUrlInput = document.getElementById('stream-url');
 const streamPasskeyInput = document.getElementById('stream-passkey');
 const videoSection = document.getElementById('video-section');
@@ -30,7 +31,7 @@ streamForm.addEventListener('submit', async event => {
 
     // Show the video section and hide the form
     videoSection.classList.add('active');
-    streamForm.style.display = 'none';
+    FormId.style.display = 'none';
 
     // Start video
     const media = await navigator.mediaDevices.getUserMedia({ audio: true, video: true });
